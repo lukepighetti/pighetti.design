@@ -1,0 +1,2 @@
+( cd react && npm run build )
+( cd firebase && firebase deploy )
