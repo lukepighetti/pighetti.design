@@ -5,7 +5,7 @@ export default class HeaderSection extends React.Component {
   render() {
     return (
       <Section>
-        <Container rotated>
+        <Grid rotated>
           <Title>
             the
             <br />
@@ -19,7 +19,7 @@ export default class HeaderSection extends React.Component {
             <ListItem>Reactive programmer</ListItem>
             <ListItem>Accidental altcoin founder</ListItem>
             <ListItem>
-              TypeScript, Firebase, Flutter, and Oxford Comma lover
+              TypeScript, Firebase, Flutter, React, and Oxford Comma lover
             </ListItem>
             <ListItem>Ex-Headphone Designer</ListItem>
           </List>
@@ -29,11 +29,15 @@ export default class HeaderSection extends React.Component {
             Twitter if you want to chat about your software, hardware, or
             ecommerce startup, or to discuss availability.
           </Footer>
-        </Container>
+        </Grid>
       </Section>
     );
   }
 }
+
+/**
+ * Styled Components
+ */
 
 const Section = styled.div`
   height: 100vh;
@@ -47,18 +51,18 @@ const Section = styled.div`
   text-transform: uppercase;
 `;
 
-type ContainerProps = {
+type GridProps = {
   rotated?: boolean;
 };
 
-const Container = styled.div`
+const Grid = styled.div`
   width: 66vw;
   display: grid;
   grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
   grid-template-rows: auto 1fr 1fr auto auto;
   grid-gap: 1rem;
 
-  ${({ rotated }: ContainerProps) =>
+  ${({ rotated }: GridProps) =>
     rotated && "transform: translate(-40px, -100px) rotate(-45deg);"}
 `;
 
