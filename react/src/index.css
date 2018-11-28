@@ -1,5 +1,17 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: rgba(10, 10, 10, 0.85);
+  --accent-color: #F21B00;
+  --border-color: rgba(10, 10, 10, 0.7);
+  --background-color: rgba(255, 255, 10, 0.2)
+}
+
+body {
+  color: var(--text-color);
+  font-family: 'Futura W01', helvetica, san-serif
 }
