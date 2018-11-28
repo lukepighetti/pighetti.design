@@ -49,6 +49,7 @@ const Section = styled.div`
   align-items: center;
 
   text-transform: uppercase;
+  overflow: hidden;
 `;
 
 type GridProps = {
