@@ -26,8 +26,7 @@ export default class HeaderSection extends React.Component {
           <Footer>
             Contact{" "}
             <a href="https://twitter.com/pighettidesign">@PIGHETTIDESIGN</a> on
-            Twitter if you want to chat about your software, hardware, or
-            ecommerce startup, or to discuss availability.
+            Twitter to chat about your next project.
           </Footer>
         </Grid>
       </Section>
