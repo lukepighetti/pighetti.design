@@ -5,12 +5,15 @@ import registerServiceWorker from "./registerServiceWorker";
 
 import HeaderSection from "./sections/Header";
 import AltcoinSection from "./sections/Altcoin";
+import HeadphoneSection from "./sections/Headphone";
 
 ReactDOM.render(
   <>
     <HeaderSection />
     <AltcoinSection />
+    <HeadphoneSection />
   </>,
   document.getElementById("root") as HTMLElement
 );
+
 registerServiceWorker();

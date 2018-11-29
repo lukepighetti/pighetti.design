@@ -60,7 +60,7 @@ interface LatestData {
     difficulty: number;
     hashrate: number;
     height: number;
-    lastHash: "00000000005bd49e0217ebbd7d26cb1549d333c606869a09bf30c2805a43ce0f";
+    lastHash: string;
     supply: number;
     timestamp: number;
   };
