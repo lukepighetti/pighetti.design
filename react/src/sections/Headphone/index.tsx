@@ -10,9 +10,7 @@ export default class HeadphoneSection extends React.Component {
           <UpperLeft />
           <LowerLeft />
           <Title>Audiophile headphones</Title>
-          <Subtitle>
-            designed for manufacturing optimized for performance
-          </Subtitle>
+          <Subtitle>designed for manufacturing & performance</Subtitle>
           <Table>
             <li>reliable hardwood enclosures</li>
             <li>class a surfaces</li>
@@ -100,9 +98,13 @@ const Subtitle = styled.div`
   text-align: end;
 
   grid-column: 2;
-  grid-row: 2/3;
+  grid-row: 1/3;
 
-  align-self: center;
+  align-self: end;
+
+  @media (max-width: 1000px) {
+    grid-row: 2/3;
+  }
 `;
 
 const Table = styled.ul`

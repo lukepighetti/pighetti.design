@@ -16,7 +16,7 @@ export default class AltcoinSection extends React.Component {
             algorithm
           </Title>
           <Subtitle>power & hashrate consistency</Subtitle>
-          <Aside>debuted on pigeoncoin</Aside>
+          <Aside>launched on pigeoncoin</Aside>
 
           <LatestDataContainer>
             {({ chain, market }) => (
