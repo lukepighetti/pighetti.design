@@ -65,11 +65,19 @@ const Grid = styled.div`
 
   ${({ rotated }: GridProps) =>
     rotated && "transform: translate(-40px, -100px) rotate(-45deg);"}
+
+  @media (min-aspect-ratio: 5/3) {
+    transform: none;
+  }
 `;
 
 const Title = styled.h1`
-  grid-column: 2 / 4;
+  grid-column: 2/4;
   text-align: right;
+
+  @media (max-width: 768px) {
+    grid-column: 2/5;
+  }
 `;
 
 const Aside = styled.h2`
@@ -118,6 +126,10 @@ const Footer = styled.p`
   grid-row: 5;
   border-bottom: 1.4rem solid var(--accent-color);
   padding-bottom: 0.14rem;
+
+  @media (max-width: 768px) {
+    grid-column: 3/5;
+  }
 
   a {
     color: var(--text-color);
