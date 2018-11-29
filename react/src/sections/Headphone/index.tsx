@@ -15,8 +15,8 @@ export default class HeadphoneSection extends React.Component {
           </Subtitle>
           <Table>
             <li>reliable hardwood enclosures</li>
-            <li>class b surfaces</li>
-            <li>scalable run size</li>
+            <li>class a surfaces</li>
+            <li>variable scale manufacturing</li>
             <li>turnkey supply chain</li>
             <li>full custom ecommerce</li>
           </Table>
@@ -29,8 +29,6 @@ export default class HeadphoneSection extends React.Component {
 const red = "#e63f3f";
 
 const Section = styled.div`
-  position: relative;
-
   height: 100vh;
   width: 100vw;
   background: rgba(50, 50, 50, 0.9);
@@ -92,7 +90,6 @@ const Title = styled.div`
   @media (max-width: 768px) {
     grid-column: 3;
   }
-  /* padding-right: 1rem; */
 `;
 
 const Subtitle = styled.div`
