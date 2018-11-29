@@ -59,24 +59,44 @@ type GridProps = {
 const Grid = styled.div`
   width: 66vw;
   display: grid;
-  grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 0.7fr auto 1fr 0.5fr;
   grid-template-rows: auto 1fr 1fr auto auto;
   grid-gap: 1rem;
 
   ${({ rotated }: GridProps) =>
-    rotated && "transform: translate(-40px, -100px) rotate(-45deg);"}
+    rotated && "transform: translate(-80px, -60px) rotate(-45deg);"}
 
-  @media (min-aspect-ratio: 5/3) {
+  @media (min-aspect-ratio: 7/5) {
     transform: none;
   }
 `;
 
 const Title = styled.h1`
-  grid-column: 2/4;
+  grid-column: 1/4;
+  grid-row: 1;
   text-align: right;
 
   @media (max-width: 768px) {
-    grid-column: 2/5;
+    grid-column: 3/5;
+    text-align: left;
+  }
+
+  @media (max-height: 700px) {
+    grid-column: 1 / 3;
+  }
+`;
+
+const Vertical = styled.h1`
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  writing-mode: vertical-rl;
+  grid-column: 3;
+  grid-row: 2 / 5;
+
+  line-height: 2.2rem;
+
+  @media (max-height: 700px) {
+    grid-row: 1 / 5;
   }
 `;
 
@@ -91,24 +111,11 @@ const Aside = styled.h2`
   align-self: end;
 `;
 
-const Vertical = styled.h1`
-  font-size: 2.8rem;
-  color: var(--accent-color);
-  writing-mode: vertical-rl;
-  grid-column: 3/4;
-  grid-row: 2 / 5;
-  /*   justify-self: end; */
-  margin-top: -10px;
-  margin-right: -10px;
-`;
-
 const List = styled.div`
-  grid-column: 1 / 3;
+  grid-column: 1 / 2;
   grid-row: 4 / span 2;
   font-weight: 700;
   line-height: 1.2;
-  /*   align-self: end; */
-  /*   background-color: pink; */
 `;
 
 const ListItem = styled.li`
@@ -122,14 +129,10 @@ const Footer = styled.p`
   font-size: 0.9rem;
   font-weight: 400;
   text-transform: none;
-  grid-column: 3 / 6;
+  grid-column: 2 / 6;
   grid-row: 5;
   border-bottom: 1.4rem solid var(--accent-color);
   padding-bottom: 0.14rem;
-
-  @media (max-width: 768px) {
-    grid-column: 3/5;
-  }
 
   a {
     color: var(--text-color);
