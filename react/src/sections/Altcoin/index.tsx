@@ -66,28 +66,19 @@ const Grid = styled.div`
   width: 80vw;
   height: 80vh;
   display: grid;
-  grid-template-columns: auto 1fr 1fr 1fr 0.5fr;
-  grid-template-rows: auto 1fr 1fr auto auto;
+  grid-template-columns: auto 1fr 1fr 1fr auto;
+  grid-template-rows: auto auto auto auto;
   grid-gap: 1rem;
-  /* transform: rotate(-90deg); */
 `;
 
 /**
  * Grid Items
  */
 
-// const Logo = styled.img`
-//   max-height: 12rem;
-//   max-width: 12rem;
-
-//   grid-column: 1;
-//   grid-row: 6;
-// `;
-
 const Title = styled.h1`
   font-size: 2.6rem;
   font-weight: 500;
-  grid-column: 1/6;
+  grid-column: 1/5;
   grid-row: 1;
   text-align: right;
 
@@ -99,8 +90,8 @@ const Title = styled.h1`
 
 const Subtitle = styled.h2`
   font-weight: 300;
-  grid-column: 6;
-  grid-row: 1;
+  grid-column: 5;
+  grid-row: 1/4;
 
   font-size: 2rem;
 
@@ -113,22 +104,25 @@ const Aside = styled.h2`
   font-size: 1.4rem;
   text-align: right;
 
-  grid-column: 2/6;
-  grid-row: 1;
+  grid-column: 2/5;
+  grid-row: 2;
 
   border-top: ${border};
   border-bottom: ${border};
 
   padding: 0.14rem;
   align-self: end;
-  transform: translateY(-10rem);
 
   max-width: 40rem;
+
+  @media (max-width: 690px) {
+    grid-column: 1/5;
+  }
 `;
 
 const Table = styled.ul`
   grid-column: 1/2;
-  grid-row: 3/6;
+  grid-row: 1/5;
 
   list-style-type: none;
   line-height: 1.2;
@@ -144,8 +138,8 @@ const Table = styled.ul`
 
 const Stats = styled.div`
   text-align: right;
-  grid-column: 2/7;
-  grid-row: 4/6;
+  grid-column: 2/6;
+  grid-row: 4/5;
 
   font-weight: 300;
 
